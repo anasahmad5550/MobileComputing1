@@ -8,70 +8,75 @@
     tools:context=".MainActivity" >
 
     <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:paddingTop="56dp"
+        android:background="#009688"
+        android:orientation="vertical"
         android:paddingLeft="24dp"
-        android:paddingRight="24dp"
-        android:background="#f7348bc6"
-        >
+        android:paddingTop="56dp"
+        android:paddingRight="24dp">
 
-
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="72dp"
+            app:srcCompat="@drawable/logo_27144" />
 
         <EditText
             android:id="@+id/input_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
+            android:hint="Name?"
             android:inputType="textPersonName"
-            android:textColor="#ffffff"
-            android:hint="Name?"/>
+            android:textColor="#ffffff" />
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
             android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp">
+            android:layout_marginBottom="8dp"
+            android:orientation="horizontal">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Gender"
-                android:textSize="18sp"/>
+                android:textSize="18sp" />
+
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
                 <RadioGroup
+                    android:id="@+id/radoGroup"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/radoGroup">
+                    android:layout_height="wrap_content">
+
                     <RadioButton
+                        android:id="@+id/f"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/f"
+                        android:checked="false"
                         android:text="Female"
-                        android:textSize="15sp"
-                        android:checked="false">
+                        android:textSize="15sp">
 
                     </RadioButton>
+
                     <RadioButton
+                        android:id="@+id/m"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:id="@+id/m"
+                        android:checked="false"
                         android:text="Male"
-                        android:textSize="15sp"
-                        android:checked="false">
+                        android:textSize="15sp">
 
                     </RadioButton>
                 </RadioGroup>
 
 
             </LinearLayout>
-
 
 
         </LinearLayout>
@@ -83,7 +88,7 @@
             android:ems="10"
             android:hint="email"
             android:inputType="textEmailAddress"
-            android:textColor="#ffffff"/>
+            android:textColor="#ffffff" />
 
         <EditText
             android:id="@+id/password"
